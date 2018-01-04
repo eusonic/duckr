@@ -1,11 +1,13 @@
 import React from 'react'
+import createReactClass from 'create-react-class'
+import { color } from './styles.css'
 
-const MainContainer = React.createClass({
+const MainContainer = createReactClass({
   render () {
     return (
-      <p>Hello World!</p>
+      <p>{'Hello Tyler!'}</p>
     )
-  }
+  },
 })
 
 export default MainContainer
