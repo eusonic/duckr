@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {PropTypes} from 'react'
 import { Navigation } from 'components'
 import { container, innerContainer } from './styles.css'
 
@@ -6,7 +6,7 @@ const MainContainer = React.createClass({
   render () {
     return (
       <div className={container}>
-        <Navigation isAuthed={true} />
+        <Navigation isAuthed={false} />
         <div className={innerContainer}>
           {this.props.children}
         </div>
@@ -14,5 +14,9 @@ const MainContainer = React.createClass({
     )
   },
 })
+
+MainContainer.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 export default MainContainer
