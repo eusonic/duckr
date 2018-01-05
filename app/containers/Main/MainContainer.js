@@ -1,11 +1,16 @@
 import React from 'react'
-import createReactClass from 'create-react-class'
-import { color } from './styles.css'
+import { Navigation } from 'components'
+import { container, innerContainer } from './styles.css'
 
-const MainContainer = createReactClass({
+const MainContainer = React.createClass({
   render () {
     return (
-      <p>{'Hello Tyler!'}</p>
+      <div className={container}>
+        <Navigation isAuthed={true} />
+        <div className={innerContainer}>
+          {this.props.children}
+        </div>
+      </div>
     )
   },
 })
