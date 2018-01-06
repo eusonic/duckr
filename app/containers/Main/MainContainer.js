@@ -3,6 +3,9 @@ import { Navigation } from 'components'
 import { container, innerContainer } from './styles.css'
 
 const MainContainer = React.createClass({
+  propTypes: {
+    children: PropTypes.node.isRequired,
+  },
   render () {
     return (
       <div className={container}>
@@ -14,9 +17,5 @@ const MainContainer = React.createClass({
     )
   },
 })
-
-MainContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default MainContainer
